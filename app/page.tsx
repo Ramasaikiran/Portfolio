@@ -8,6 +8,7 @@ import Contact from "@/components/sections/Contact";
 
 // Lazy load 3D background for better performance
 import Skills from "@/components/sections/Skills";
+import Achievements from "@/components/sections/Achievements";
 
 export default function Home() {
   return (
@@ -49,6 +50,9 @@ export default function Home() {
 
         {/* Skills Section */}
         <Skills />
+
+        {/* Achievements Section */}
+        <Achievements />
 
         {/* Projects Section */}
         <Projects />
