@@ -13,7 +13,7 @@ export const PERSONAL_INFO = {
     college: "ACE Engineering College",
     cgpa: "8.34",
     graduation: "2026",
-    resumeUrl: "/_SDE Intern.pdf",
+    resumeUrl: "/resume.pdf",
 } as const;
 
 /**
