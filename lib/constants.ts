@@ -66,7 +66,7 @@ export const PROJECTS: Project[] = [
             "React",
             "TailwindCSS",
         ],
-        github: "https://github.com/Ramasaikiran/AI-POWERED-SPEECH-AND-DOCUMENT-TRANSLATOR",
+        github: "https://github.com/Ramasaikiran/AI-POWERED-SPEECH-DOCUMENT-TRANSLATOR",
         metrics: [
             { label: "Languages", value: "20+" },
             { label: "File Formats", value: "PDF, DOCX, TXT" },
@@ -203,3 +203,4 @@ export const COLORS = {
         glow: "#c4b5fd", // Lighter Purple for glows
     },
 } as const;
+
