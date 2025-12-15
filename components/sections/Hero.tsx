@@ -73,7 +73,14 @@ export default function Hero() {
                     <Button
                         variant="ghost"
                         size="lg"
-                        onClick={() => window.open(PERSONAL_INFO.resumeUrl, "_blank")}
+                        onClick={() => {
+                            const link = document.createElement('a');
+                            link.href = PERSONAL_INFO.resumeUrl;
+                            link.download = 'Rama_Sai_Kiran_Medam_Resume.pdf';
+                            document.body.appendChild(link);
+                            link.click();
+                            document.body.removeChild(link);
+                        }}
                     >
                         <Download size={20} className="mr-2" />
                         Resume
