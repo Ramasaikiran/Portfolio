@@ -66,7 +66,8 @@ export const PROJECTS: Project[] = [
             "React",
             "TailwindCSS",
         ],
-        github: "https://github.com/Ramasaikiran/AI-POWERED-SPEECH-DOCUMENT-TRANSLATOR",
+        github: "https://github.com/Ramasaikiran/AI-POWERED-SPEECH-AND-DOCUMENT-TRANSLATOR",
+        liveUrl: "https://ai-powered-speech-document-translat.vercel.app/",
         metrics: [
             { label: "Languages", value: "20+" },
             { label: "File Formats", value: "PDF, DOCX, TXT" },
@@ -93,7 +94,7 @@ export const PROJECTS: Project[] = [
     },
     {
         id: "collaborative-workspace",
-        title: "Collaborative Workspace ",
+        title: "Collaborative Workspace for Projects",
         description: "Real-time collaboration platform for distributed teams",
         challenge:
             "Building a seamless real-time collaboration platform where distributed teams can work together on projects, share resources, and communicate effectively without latency issues or data conflicts.",
@@ -104,7 +105,8 @@ export const PROJECTS: Project[] = [
             "Node.js",
             "MongoDB",
         ],
-        github: "https://github.com/Ramasaikiran/Collaborative-Workspace-",
+        github: "https://github.com/Ramasaikiran/Collaborative_Workspace_for_Project",
+        liveUrl: "https://collaborative-workspace-8ruz.vercel.app/",
         metrics: [
             { label: "Sync Latency", value: "<100ms" },
         ],
@@ -203,5 +205,3 @@ export const COLORS = {
         glow: "#c4b5fd", // Lighter Purple for glows
     },
 } as const;
-
-
