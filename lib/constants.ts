@@ -11,7 +11,7 @@ export const PERSONAL_INFO = {
     email: "ramasaikiranm@gmail.com",
     location: "Hyderabad, India",
     college: "ACE Engineering College",
-    cgpa: "8.34",
+    cgpa: "8.35",
     graduation: "2026",
     resumeUrl: "/resume.pdf",
 } as const;
@@ -66,7 +66,7 @@ export const PROJECTS: Project[] = [
             "React",
             "TailwindCSS",
         ],
-        github: "https://github.com/Ramasaikiran/AI-POWERED-SPEECH-AND-DOCUMENT-TRANSLATOR",
+        github: "https://github.com/Ramasaikiran/AI-POWERED-SPEECH-DOCUMENT-TRANSLATOR",
         liveUrl: "https://ai-powered-speech-document-translat.vercel.app/",
         metrics: [
             { label: "Languages", value: "20+" },
@@ -87,14 +87,14 @@ export const PROJECTS: Project[] = [
             "React",
             "PostgreSQL",
         ],
-        github: "https://github.com/Ramasaikiran/AI-Powered-Tool-For-Misinformation",
+        github: "https://github.com/Ramasaikiran/AI-Powered Misinformation Detection Platform",
         metrics: [
             { label: "Accuracy", value: "87%" },
         ],
     },
     {
         id: "collaborative-workspace",
-        title: "Collaborative Workspace for Projects",
+        title: "Collaborative Workspace",
         description: "Real-time collaboration platform for distributed teams",
         challenge:
             "Building a seamless real-time collaboration platform where distributed teams can work together on projects, share resources, and communicate effectively without latency issues or data conflicts.",
@@ -105,7 +105,7 @@ export const PROJECTS: Project[] = [
             "Node.js",
             "MongoDB",
         ],
-        github: "https://github.com/Ramasaikiran/Collaborative_Workspace_for_Project",
+        github: "https://github.com/Ramasaikiran/Collaborative-Workspace-",
         liveUrl: "https://collaborative-workspace-8ruz.vercel.app/",
         metrics: [
             { label: "Sync Latency", value: "<100ms" },
@@ -138,15 +138,14 @@ export const SKILLS: SkillCategory[] = [
         skills: [
             "Git",
             "Firebase",
-            "PostgreSQL",
-            "MongoDB",
+            "My SQL",
         ],
     },
     {
         category: "Core CS",
         skills: [
             "Data Structures & Algorithms",
-            "System Design",
+            "System Design Basics",
             "OOP",
             "REST APIs",
         ],
@@ -170,13 +169,6 @@ export const ACHIEVEMENTS: Achievement[] = [
         issuer: "Google",
         date: "2025",
         description: "Selected for refinement phase",
-    },
-    {
-        id: "leetcode",
-        title: "LeetCode Top 13%",
-        issuer: "LeetCode",
-        date: "2025",
-        description: "Consistent problem-solving excellence",
     },
     {
         id: "english-proficiency",
