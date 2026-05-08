@@ -51,19 +51,30 @@ export const NAV_LINKS = [
  * Projects / Case Studies
  */
 export const PROJECTS: Project[] = [
- {
-    id: "Idea Audit",
-    title: "Idea Audit",
-    description: "A structured idea validation tool for founders and developers. Features include scoring system, customizable criteria, and repeatable analysis. Use cases: startup validation, feature prioritization, hackathon selection, and business strategy evaluation.",
-    techStack: ["Python", "ClaudeAPI", "React", "SQL"],
-    github: "https://github.com/Ramasaikiran/Idea-audit",
-    liveUrl: "https://idea-audit.vercel.app/",
-    metrics: [{ label: "Accuracy", value: "87%" }],
-},
+    {
+        id: "idea-audit",
+        title: "Idea Audit",
+        description: "A structured idea validation tool for founders, developers, and creators to evaluate ideas using scoring criteria before investing time and resources.",
+        challenge:
+            "Founders and developers often invest time in ideas without structured evaluation. The challenge was to build a simple, repeatable scoring system that works across startups, products, and hackathon projects.",
+        solution:
+            "Built a scoring engine with customizable criteria that evaluates ideas across multiple dimensions. Integrated Claude API for AI-assisted feedback and structured the output to give clear, actionable validation results.",
+        techStack: [
+            "Python",
+            "ClaudeAPI",
+            "React",
+            "SQL",
+        ],
+        github: "https://github.com/Ramasaikiran/Idea-audit",
+        liveUrl: "https://idea-audit.vercel.app/",
+        metrics: [
+            { label: "Accuracy", value: "87%" },
+        ],
+    },
     {
         id: "misinformation-detection",
         title: "AI-Powered Tool For Misinformation",
-        description: "Full-stack credibility analysis system for detecting fake text and media",
+        description: "Full-stack credibility analysis system for detecting fake text and media.",
         challenge:
             "Combating the spread of fake news across multiple content formats (text, images, videos) while providing real-time verification results. The challenge was to build a system that could analyze content credibility with high accuracy while maintaining fast response times for user queries.",
         solution:
@@ -82,7 +93,7 @@ export const PROJECTS: Project[] = [
     {
         id: "collaborative-workspace",
         title: "Collaborative Workspace",
-        description: "Real-time collaboration platform for distributed teams",
+        description: "Real-time collaboration platform for distributed teams.",
         challenge:
             "Building a seamless real-time collaboration platform where distributed teams can work together on projects, share resources, and communicate effectively without latency issues or data conflicts.",
         solution:
