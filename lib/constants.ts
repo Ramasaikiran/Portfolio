@@ -51,26 +51,32 @@ export const NAV_LINKS = [
  * Projects / Case Studies
  */
 export const PROJECTS: Project[] = [
-    {
-        id: "ai-translator",
-        title: "AI-Powered Speech and Document Translator",
-        description: "Multilingual translation system with document upload and speech recognition",
-        challenge:
-            "Supporting multilingual workflows for users who need to translate documents (PDF, DOCX) and convert speech to text across 20+ languages. The system needed to handle various file formats, maintain formatting integrity, and provide real-time speech translation with high accuracy.",
-        solution:
-            "Built a robust translation API pipeline with Google Cloud Translation API for text for document parsing, for speech-to-text conversion. Implemented intelligent chunking for large documents, parallel processing for faster translation, and comprehensive error handling for edge cases.",
+   {
+        id: "Idea Audit",
+        title: "Idea Audit",
+        description: "Idea Audit is a simple tool to evaluate and validate ideas using structured scoring criteria. It helps founders, developers, and creators make better decisions before investing time and resources.",
+        Features :
+ "Structured idea evaluation
+ "Scoring system for decision making
+ "Customizable criteria
+ "Quick and repeatable analysis
+ "Useful for startups, projects, and product ideas
+    
+ "Use Cases :Startup idea validation
+"Product feature prioritization
+"Hackathon project selection
+"Business strategy evaluationing APIs.
+"Implemented a scoring algorithm that weighs multiple signals to produce a credibility score with explanations.",
         techStack: [
-            "Node.js",
-            "Express",
-            "Google Cloud Translation",
+            "Python",
+            "ClaudeAPI",
             "React",
-            "TailwindCSS",
+            "SQL",
         ],
-        github: "https://github.com/Ramasaikiran/AI-POWERED-SPEECH-DOCUMENT-TRANSLATOR",
-        liveUrl: "https://ai-powered-speech-document-translat.vercel.app/",
+       github: "https://github.com/Ramasaikiran/Idea-audit",
+        liveUrl: "https://idea-audit.vercel.app/",
         metrics: [
-            { label: "Languages", value: "20+" },
-            { label: "File Formats", value: "PDF, DOCX, TXT" },
+            { label: "Accuracy", value: "87%" },
         ],
     },
     {
@@ -85,9 +91,9 @@ export const PROJECTS: Project[] = [
             "Python",
             "FastAPI",
             "React",
-            "PostgreSQL",
+            "SQL",
         ],
-        github: "https://github.com/Ramasaikiran/AI-Powered Misinformation Detection Platform",
+        github: "https://github.com/Ramasaikiran/AI-Powered-Misinformation-Detection-platform",
         metrics: [
             { label: "Accuracy", value: "87%" },
         ],
@@ -103,7 +109,7 @@ export const PROJECTS: Project[] = [
         techStack: [
             "React",
             "Node.js",
-            "MongoDB",
+            "SQL",
         ],
         github: "https://github.com/Ramasaikiran/Collaborative-Workspace-",
         liveUrl: "https://collaborative-workspace-8ruz.vercel.app/",
@@ -119,18 +125,27 @@ export const PROJECTS: Project[] = [
 export const SKILLS: SkillCategory[] = [
     {
         category: "Languages",
-        skills: ["Java", "Python", "JavaScript", "TypeScript", "SQL"],
+        skills: ["Java", "Python"],
     },
     {
-        category: "Frameworks & Libraries",
-        skills: ["React", "Node.js", "Express", "FastAPI"],
+        category: "Frontend",
+        skills: ["HTML", "CSS", "JavaScript", "TypeScript", "React", "ResponsiveUI"],
+    },
+    {
+        category: "Backend",
+        skills: ["Node.js", "Express", "FastAPI", "API Design"],
+    },
+    {
+        category: "DataBase",
+        skills: ["SQL", "MongoDB"],
     },
     {
         category: "AI & ML",
         skills: [
             "Generative AI",
             "LangChain",
-            "TensorFlow",
+            "Langgraph",
+            "promptEngineering",
         ],
     },
     {
@@ -138,16 +153,15 @@ export const SKILLS: SkillCategory[] = [
         skills: [
             "Git",
             "Firebase",
-            "My SQL",
+            "Cursor",
         ],
     },
     {
         category: "Core CS",
         skills: [
             "Data Structures & Algorithms",
-            "System Design Basics",
-            "OOP",
-            "REST APIs",
+            "System Design Fundamentals",
+            "OOPs",
         ],
     },
 ];
@@ -158,24 +172,24 @@ export const SKILLS: SkillCategory[] = [
 export const ACHIEVEMENTS: Achievement[] = [
     {
         id: "buildathon",
-        title: "Selected for OpenAI Buildathon",
+        title: "OpenAI Buildathon Finalist",
         issuer: "OpenAI & NxtWave",
         date: "2025",
-        description: "Selected for Round 2 nationwide among thousands of participants",
+        description: "OpenAI Buildathon State Finalist",
     },
     {
         id: "google-hackathon",
         title: "Google Gen AI Hackathon",
         issuer: "Google",
         date: "2025",
-        description: "Selected for refinement phase",
+        description: "Google Gen AI Hackathon SemiFinalist(National Level)",
     },
     {
-        id: "english-proficiency",
-        title: "Pearson English Proficiency Level 10 (GSE)",
-        issuer: "Pearson",
+        id: "Newsletter",
+        title: "Author of AI With RSK",
+        issuer: "Linkedin",
         date: "2025",
-        description: "Advanced English proficiency certification",
+        description: "Author of AI With RSK Linkedin Newsletter(500+ followers)",
     },
 ];
 
