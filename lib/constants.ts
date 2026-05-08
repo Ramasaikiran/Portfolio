@@ -51,34 +51,15 @@ export const NAV_LINKS = [
  * Projects / Case Studies
  */
 export const PROJECTS: Project[] = [
-   {
-        id: "Idea Audit",
-        title: "Idea Audit",
-        description: "Idea Audit is a simple tool to evaluate and validate ideas using structured scoring criteria. It helps founders, developers, and creators make better decisions before investing time and resources.",
-        Features :
- "Structured idea evaluation
- "Scoring system for decision making
- "Customizable criteria
- "Quick and repeatable analysis
- "Useful for startups, projects, and product ideas
-    
- "Use Cases :Startup idea validation
-"Product feature prioritization
-"Hackathon project selection
-"Business strategy evaluationing APIs.
-"Implemented a scoring algorithm that weighs multiple signals to produce a credibility score with explanations.",
-        techStack: [
-            "Python",
-            "ClaudeAPI",
-            "React",
-            "SQL",
-        ],
-       github: "https://github.com/Ramasaikiran/Idea-audit",
-        liveUrl: "https://idea-audit.vercel.app/",
-        metrics: [
-            { label: "Accuracy", value: "87%" },
-        ],
-    },
+ {
+    id: "Idea Audit",
+    title: "Idea Audit",
+    description: "A structured idea validation tool for founders and developers. Features include scoring system, customizable criteria, and repeatable analysis. Use cases: startup validation, feature prioritization, hackathon selection, and business strategy evaluation.",
+    techStack: ["Python", "ClaudeAPI", "React", "SQL"],
+    github: "https://github.com/Ramasaikiran/Idea-audit",
+    liveUrl: "https://idea-audit.vercel.app/",
+    metrics: [{ label: "Accuracy", value: "87%" }],
+},
     {
         id: "misinformation-detection",
         title: "AI-Powered Tool For Misinformation",
