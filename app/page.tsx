@@ -6,7 +6,9 @@ import Projects from "@/components/sections/Projects";
 import Contact from "@/components/sections/Contact";
 import Skills from "@/components/sections/Skills";
 import Achievements from "@/components/sections/Achievements";
+import Experience from "@/components/sections/Experience";
 import Image from "next/image";
+import { PERSONAL_INFO } from "@/lib/constants";
 
 export default function Home() {
   return (
@@ -38,16 +40,22 @@ export default function Home() {
               </div>
             </div>
             <h1 className="mb-4 text-5xl font-bold text-gray-900 sm:text-6xl lg:text-7xl">
-              Rama Sai Kiran Medam
+              {PERSONAL_INFO.name}
             </h1>
             <p className="mb-6 text-xl text-purple-600 sm:text-2xl">
-              AI & Software Engineer , Full Stack Developer
+              {PERSONAL_INFO.title}
             </p>
             <h2 className="mb-8 text-3xl font-bold text-gray-800 sm:text-4xl lg:text-5xl">
-              Building scalable systems & intuitive interfaces
+              {PERSONAL_INFO.tagline}
             </h2>
+            <p className="mx-auto max-w-2xl text-lg leading-relaxed text-gray-600">
+              {PERSONAL_INFO.bio}
+            </p>
           </div>
         </section>
+
+        {/* Experience Section */}
+        <Experience />
 
         {/* Skills Section */}
         <Skills />

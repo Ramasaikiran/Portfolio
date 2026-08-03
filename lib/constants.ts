@@ -1,4 +1,4 @@
-import { Project, SkillCategory, Achievement, SocialLink } from "@/types";
+import { Project, SkillCategory, Achievement, SocialLink, Experience } from "@/types";
 
 /**
  * Personal Information
@@ -7,7 +7,7 @@ export const PERSONAL_INFO = {
     name: "Rama Sai Kiran Medam",
     title: "Full-Stack Engineer | AI Product Builder",
     tagline: "Shipping production AI apps that solve real problems",
-    bio: "I'm a driven Computer Science student passionate about AI, scalable systems, and clean code. Currently pursuing my degree at ACE Engineering College with a focus on building production-ready applications that solve real-world problems. My goal is to join a MAANG company where I can contribute to impactful engineering while continuously learning from the best.",
+    bio: "Computer Science graduate (ACE Engineering College) who ships. I've built and deployed 3 full-stack platforms solo — from database design through production — spanning Java/Spring Boot, Node.js, and React. As an AI Developer Intern at Swecha, I cut production hallucination risk by 15% through structured debugging of multi-stage inference pipelines. Now looking to bring that same build-and-ship instinct to a full-time engineering team.",
     email: "ramasaikiranm@gmail.com",
     location: "Hyderabad, India",
     college: "ACE Engineering College",
@@ -117,20 +117,31 @@ export const PROJECTS: Project[] = [
  */
 export const SKILLS: SkillCategory[] = [
     {
-        category: "Languages",
-        skills: ["Java"],
-    },
-    {
         category: "Frontend",
-        skills: ["HTML", "CSS", "JavaScript", "TypeScript", "React", "ResponsiveUI"],
+        skills: ["HTML", "CSS", "JavaScript", "TypeScript", "React"],
     },
     {
         category: "Backend",
-        skills: ["Node.js", "Express", "FastAPI", "API Design"],
+        skills: ["Java", "Node.js", "Spring Boot", "REST APIs"],
     },
     {
-        category: "DataBase",
-        skills: ["SQL", "MongoDB"],
+        category: "Databases",
+        skills: ["SQL", "Supabase"],
+    },
+    {
+        category: "Core CS Concepts",
+        skills: [
+            "Data Structures & Algorithms",
+            "Object-Oriented Programming",
+            "Operating Systems",
+            "Computer Networks",
+            "System Design",
+            "Microservices Architecture",
+        ],
+    },
+    {
+        category: "Developer Tools",
+        skills: ["Git", "GitHub", "Vercel"],
     },
     {
         category: "AI & ML",
@@ -140,20 +151,19 @@ export const SKILLS: SkillCategory[] = [
             "promptEngineering",
         ],
     },
+];
+
+/**
+ * Work Experience
+ */
+export const EXPERIENCE: Experience[] = [
     {
-        category: "Tools & Platforms",
-        skills: [
-            "Git",
-            "Firebase",
-            "Cursor",
-        ],
-    },
-    {
-        category: "Core CS",
-        skills: [
-            "Data Structures & Algorithms",
-            "System Design Fundamentals",
-            "OOPs",
+        id: "swecha-ai-intern",
+        role: "AI Developer Intern",
+        company: "Swecha",
+        duration: "May 2025 – June 2025",
+        bullets: [
+            "Reduced production hallucination risk by 15% through structured debugging and root cause analysis across multi-stage inference pipelines",
         ],
     },
 ];

@@ -38,6 +38,17 @@ export interface SkillCategory {
 }
 
 /**
+ * Work experience type
+ */
+export interface Experience {
+    id: string;
+    role: string;
+    company: string;
+    duration: string;
+    bullets: string[];
+}
+
+/**
  * Achievement type
  */
 export interface Achievement {
