@@ -35,8 +35,11 @@ export default function GlassNavbar() {
 
     const handleNavClick = (href: string) => {
         const id = href.substring(1);
-        scrollToElement(id);
+        // Close any open project modal first — it locks body scroll
+        // and sits above the navbar, which blocks section navigation.
+        window.dispatchEvent(new Event("closeProjectModal"));
         setIsMobileMenuOpen(false);
+        requestAnimationFrame(() => scrollToElement(id));
     };
 
     return (
@@ -49,17 +52,7 @@ export default function GlassNavbar() {
                 }`}
         >
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div className="flex h-16 items-center justify-between">
-                    {/* Logo */}
-                    <motion.button
-                        onClick={() => scrollToElement("about")}
-                        className="text-xl font-bold text-gray-900"
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                    >
-                        RSK
-                    </motion.button>
-
+                <div className="flex h-16 items-center justify-end">
                     {/* Desktop Navigation */}
                     <div className="hidden items-center space-x-8 md:flex">
                         {NAV_LINKS.map((link) => (

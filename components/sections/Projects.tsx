@@ -17,6 +17,12 @@ export default function Projects() {
     // reliable on mobile Chrome/Safari, which can still scroll the
     // background via touch — pin body position instead)
     useEffect(() => {
+        const close = () => setSelectedProject(null);
+        window.addEventListener("closeProjectModal", close);
+        return () => window.removeEventListener("closeProjectModal", close);
+    }, []);
+
+    useEffect(() => {
         if (!selectedProject) return;
 
         const scrollY = window.scrollY;
