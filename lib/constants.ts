@@ -72,44 +72,6 @@ export const PROJECTS: Project[] = [
         ],
     },
     {
-        id: "misinformation-detection",
-        title: "AI-Powered Tool For Misinformation",
-        description: "Full-stack credibility analysis system for detecting fake text and media.",
-        challenge:
-            "Combating the spread of fake news across multiple content formats (text, images, videos) while providing real-time verification results. The challenge was to build a system that could analyze content credibility with high accuracy while maintaining fast response times for user queries.",
-        solution:
-            "Developed a full-stack AI pipeline that integrates multiple verification layers: NLP-based text classification using fine-tuned transformers, reverse image search for media verification, and integration with third-party fact-checking APIs. Implemented a scoring algorithm that weighs multiple signals to produce a credibility score with explanations.",
-        techStack: [
-            "Python",
-            "FastAPI",
-            "React",
-            "SQL",
-        ],
-        github: "https://github.com/Ramasaikiran/AI-Powered-Misinformation-Detection-platform",
-        metrics: [
-            { label: "Accuracy", value: "87%" },
-        ],
-    },
-    {
-        id: "collaborative-workspace",
-        title: "Collaborative Workspace",
-        description: "Real-time collaboration platform for distributed teams.",
-        challenge:
-            "Building a seamless real-time collaboration platform where distributed teams can work together on projects, share resources, and communicate effectively without latency issues or data conflicts.",
-        solution:
-            "Developed a collaborative workspace using WebSocket for real-time synchronization, implemented operational transformation for conflict-free editing, and created an intuitive UI for project management. Added features like role-based access control, activity tracking, and integrated file sharing.",
-        techStack: [
-            "React",
-            "Node.js",
-            "SQL",
-        ],
-        github: "https://github.com/Ramasaikiran/Collaborative-Workspace-",
-        liveUrl: "https://collaborative-workspace-8ruz.vercel.app/",
-        metrics: [
-            { label: "Sync Latency", value: "<100ms" },
-        ],
-    },
-    {
         id: "safe-her",
         title: "Safe Her",
         description: "Women's travel safety platform with AI-powered SOS assistant.",
