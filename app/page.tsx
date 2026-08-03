@@ -8,7 +8,10 @@ import Skills from "@/components/sections/Skills";
 import Achievements from "@/components/sections/Achievements";
 import Experience from "@/components/sections/Experience";
 import Image from "next/image";
+import { Download } from "lucide-react";
+import Button from "@/components/ui/Button";
 import { PERSONAL_INFO } from "@/lib/constants";
+import { scrollToElement } from "@/lib/utils";
 
 export default function Home() {
   return (
@@ -51,6 +54,37 @@ export default function Home() {
             <p className="mx-auto max-w-2xl text-lg leading-relaxed text-gray-600">
               {PERSONAL_INFO.bio}
             </p>
+            <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+              <Button
+                variant="primary"
+                size="lg"
+                onClick={() => scrollToElement("projects")}
+              >
+                View Projects
+              </Button>
+              <Button
+                variant="secondary"
+                size="lg"
+                onClick={() => scrollToElement("contact")}
+              >
+                Get In Touch
+              </Button>
+              <Button
+                variant="ghost"
+                size="lg"
+                onClick={() => {
+                  const link = document.createElement("a");
+                  link.href = PERSONAL_INFO.resumeUrl;
+                  link.download = "Rama_Sai_Kiran_Medam_Resume.pdf";
+                  document.body.appendChild(link);
+                  link.click();
+                  document.body.removeChild(link);
+                }}
+              >
+                <Download size={20} className="mr-2" />
+                Resume
+              </Button>
+            </div>
           </div>
         </section>
 

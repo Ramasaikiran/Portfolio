@@ -5,9 +5,9 @@ import { Project, SkillCategory, Achievement, SocialLink, Experience } from "@/t
  */
 export const PERSONAL_INFO = {
     name: "Rama Sai Kiran Medam",
-    title: "Full-Stack Engineer | AI Product Builder",
+    title: "Full-Stack Engineer | AI Product Builder | Java Developer",
     tagline: "Shipping production AI apps that solve real problems",
-    bio: "Computer Science graduate (ACE Engineering College) who ships. I've built and deployed 3 full-stack platforms solo — from database design through production — spanning Java/Spring Boot, Node.js, and React. As an AI Developer Intern at Swecha, I cut production hallucination risk by 15% through structured debugging of multi-stage inference pipelines. Now looking to bring that same build-and-ship instinct to a full-time engineering team.",
+    bio: "Computer Science graduate (ACE Engineering College) who ships. I've built and deployed 3 full-stack platforms solo, from database design through production, spanning Java/Spring Boot, Node.js, and React. As an AI Developer Intern at Swecha, I cut production hallucination risk by 15% through structured debugging of multi-stage inference pipelines. Now looking to bring that same build-and-ship instinct to a full-time engineering team.",
     email: "ramasaikiranm@gmail.com",
     location: "Hyderabad, India",
     college: "ACE Engineering College",
@@ -161,7 +161,7 @@ export const EXPERIENCE: Experience[] = [
         id: "swecha-ai-intern",
         role: "AI Developer Intern",
         company: "Swecha",
-        duration: "May 2025 – June 2025",
+        duration: "May 2025 - June 2025",
         bullets: [
             "Reduced production hallucination risk by 15% through structured debugging and root cause analysis across multi-stage inference pipelines",
         ],

@@ -7,7 +7,6 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import FloatingCard from "@/components/ui/FloatingCard";
 import Input from "@/components/ui/Input";
-import Textarea from "@/components/ui/Textarea";
 import Button from "@/components/ui/Button";
 import { contactFormSchema, ContactFormData } from "@/lib/validations";
 import { PERSONAL_INFO, SOCIAL_LINKS } from "@/lib/constants";
@@ -94,15 +93,6 @@ export default function Contact() {
                                         placeholder="your.email@example.com"
                                         error={errors.email?.message}
                                         {...register("email")}
-                                    />
-
-                                    <Textarea
-                                        id="message"
-                                        label="Message"
-                                        placeholder="Tell me about your project..."
-                                        rows={5}
-                                        error={errors.message?.message}
-                                        {...register("message")}
                                     />
 
                                     <Button
