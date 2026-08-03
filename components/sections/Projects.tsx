@@ -13,11 +13,27 @@ import { fadeInUp, staggerContainer } from "@/lib/animations";
 export default function Projects() {
     const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
-    // Lock body scroll when modal is open
+    // Lock body scroll when modal is open (overflow:hidden alone isn't
+    // reliable on mobile Chrome/Safari, which can still scroll the
+    // background via touch — pin body position instead)
     useEffect(() => {
-        document.body.style.overflow = selectedProject ? "hidden" : "unset";
+        if (!selectedProject) return;
+
+        const scrollY = window.scrollY;
+        const { body } = document;
+        body.style.position = "fixed";
+        body.style.top = `-${scrollY}px`;
+        body.style.left = "0";
+        body.style.right = "0";
+        body.style.overflow = "hidden";
+
         return () => {
-            document.body.style.overflow = "unset";
+            body.style.position = "";
+            body.style.top = "";
+            body.style.left = "";
+            body.style.right = "";
+            body.style.overflow = "";
+            window.scrollTo(0, scrollY);
         };
     }, [selectedProject]);
 
