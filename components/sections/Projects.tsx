@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { ExternalLink, Github, X } from "lucide-react";
 import FloatingCard from "@/components/ui/FloatingCard";
@@ -12,6 +13,11 @@ import { fadeInUp, staggerContainer } from "@/lib/animations";
 
 export default function Projects() {
     const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
 
     // Lock body scroll when modal is open (overflow:hidden alone isn't
     // reliable on mobile Chrome/Safari, which can still scroll the
@@ -44,6 +50,7 @@ export default function Projects() {
     }, [selectedProject]);
 
     return (
+        <>
         <section id="projects" className="relative z-10 overflow-hidden bg-white px-4 py-24">
             <div className="absolute inset-0 z-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]"></div>
             <div className="relative z-10 mx-auto max-w-7xl">
@@ -109,8 +116,9 @@ export default function Projects() {
                     </div>
                 </motion.div>
             </div>
+        </section>
 
-            {/* Modal */}
+        {mounted && createPortal(
             <AnimatePresence>
                 {selectedProject && (
                     <>
@@ -120,7 +128,7 @@ export default function Projects() {
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
                             onClick={() => setSelectedProject(null)}
-                            className="fixed inset-0 z-[60] bg-black/60 backdrop-blur-sm"
+                            className="fixed inset-0 z-[100] bg-black/60 backdrop-blur-sm"
                         />
 
                         {/* Modal Content */}
@@ -128,7 +136,7 @@ export default function Projects() {
                             initial={{ opacity: 0, scale: 0.9, y: 20 }}
                             animate={{ opacity: 1, scale: 1, y: 0 }}
                             exit={{ opacity: 0, scale: 0.9, y: 20 }}
-                            className="fixed inset-4 z-[60] overflow-y-auto rounded-2xl border border-purple-200 bg-white/95 p-6 backdrop-blur-md sm:inset-8 lg:inset-16"
+                            className="fixed inset-4 z-[100] overflow-y-auto rounded-2xl border border-purple-200 bg-white/95 p-6 backdrop-blur-md sm:inset-8 lg:inset-16"
                         >
                             <button
                                 onClick={() => setSelectedProject(null)}
@@ -217,7 +225,9 @@ export default function Projects() {
                         </motion.div>
                     </>
                 )}
-            </AnimatePresence>
-        </section>
+            </AnimatePresence>,
+            document.body
+        )}
+        </>
     );
 }
