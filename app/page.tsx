@@ -1,14 +1,12 @@
 "use client";
 
-import dynamic from "next/dynamic";
 import GlassNavbar from "@/components/layout/GlassNavbar";
 import Footer from "@/components/layout/Footer";
 import Projects from "@/components/sections/Projects";
 import Contact from "@/components/sections/Contact";
-
-// Lazy load 3D background for better performance
 import Skills from "@/components/sections/Skills";
 import Achievements from "@/components/sections/Achievements";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -29,10 +27,13 @@ export default function Home() {
           <div className="mx-auto max-w-4xl text-center">
             <div className="mb-8 flex justify-center">
               <div className="relative h-40 w-40 overflow-hidden rounded-full border-4 border-white shadow-xl sm:h-48 sm:w-48">
-                <img
+                <Image
                   src="/profile.jpg"
                   alt="Rama Sai Kiran Medam"
-                  className="h-full w-full object-cover"
+                  fill
+                  priority
+                  sizes="(min-width: 640px) 192px, 160px"
+                  className="object-cover"
                 />
               </div>
             </div>

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ExternalLink, Github, X } from "lucide-react";
 import FloatingCard from "@/components/ui/FloatingCard";
@@ -14,13 +14,12 @@ export default function Projects() {
     const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
     // Lock body scroll when modal is open
-    if (typeof window !== "undefined") {
-        if (selectedProject) {
-            document.body.style.overflow = "hidden";
-        } else {
+    useEffect(() => {
+        document.body.style.overflow = selectedProject ? "hidden" : "unset";
+        return () => {
             document.body.style.overflow = "unset";
-        }
-    }
+        };
+    }, [selectedProject]);
 
     return (
         <section id="projects" className="relative z-10 overflow-hidden bg-white px-4 py-24">

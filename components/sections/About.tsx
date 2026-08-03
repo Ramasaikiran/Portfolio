@@ -125,7 +125,7 @@ export default function About() {
                                     line should serve a purpose, every component should be
                                     reusable, and every system should be built with the end user in
                                     mind. My goal is to create technology that not only works
-                                    flawlessly but also provides genuine value to people's lives.
+                                    flawlessly but also provides genuine value to people&apos;s lives.
                                 </p>
                             </FloatingCard>
                         </motion.div>

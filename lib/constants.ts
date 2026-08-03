@@ -1,12 +1,12 @@
-import { Project, SkillCategory, Achievement, SocialLink, LabExperiment } from "@/types";
+import { Project, SkillCategory, Achievement, SocialLink } from "@/types";
 
 /**
  * Personal Information
  */
 export const PERSONAL_INFO = {
     name: "Rama Sai Kiran Medam",
-    title: "AI Generalist & Full-Stack Engineer",
-    tagline: "Building scalable systems & intuitive interfaces",
+    title: "Full-Stack Engineer | AI Product Builder",
+    tagline: "Shipping production AI apps that solve real problems",
     bio: "I'm a driven Computer Science student passionate about AI, scalable systems, and clean code. Currently pursuing my degree at ACE Engineering College with a focus on building production-ready applications that solve real-world problems. My goal is to join a MAANG company where I can contribute to impactful engineering while continuously learning from the best.",
     email: "ramasaikiranm@gmail.com",
     location: "Hyderabad, India",
@@ -109,6 +109,45 @@ export const PROJECTS: Project[] = [
             { label: "Sync Latency", value: "<100ms" },
         ],
     },
+    {
+        id: "safe-her",
+        title: "Safe Her",
+        description: "Women's travel safety platform with AI-powered SOS assistant.",
+        challenge:
+            "Women travellers in India lack a reliable, real-time safety net that connects them to verified guides and emergency response without friction.",
+        solution:
+            "Built a dual-role platform for travellers and guides with a RAG-powered AI safety assistant, OTP-based auth, SOS push notifications, and Aadhaar e-KYC scaffolding for guide verification.",
+        techStack: [
+            "React",
+            "TypeScript",
+            "Supabase",
+            "Tailwind",
+        ],
+        github: "https://github.com/Ramasaikiran/Safe-Her",
+        liveUrl: "https://safe-her-pi.vercel.app/",
+        metrics: [
+            { label: "Roles", value: "2 (Traveller/Guide)" },
+        ],
+    },
+    {
+        id: "nyaya-ai",
+        title: "NyayaAI",
+        description: "Role-based legal AI platform for petition drafting and lawyer KYC.",
+        challenge:
+            "Legal petition drafting is slow and inaccessible, and platforms connecting users to verified lawyers need strict role-based control.",
+        solution:
+            "Built a role-based access control system for lawyers, users, and admins, with AI-assisted petition drafting and a lawyer KYC pipeline.",
+        techStack: [
+            "React",
+            "Node.js",
+            "Spring Boot",
+        ],
+        github: "https://github.com/Ramasaikiran/NyayaAI",
+        liveUrl: "https://nyaya-ai-s38w-k87qjg2qd-kirans-projects-9ede22f9.vercel.app/",
+        metrics: [
+            { label: "Roles", value: "3 (Lawyer/User/Admin)" },
+        ],
+    },
 ];
 
 /**
@@ -117,7 +156,7 @@ export const PROJECTS: Project[] = [
 export const SKILLS: SkillCategory[] = [
     {
         category: "Languages",
-        skills: ["Java", "Python"],
+        skills: ["Java"],
     },
     {
         category: "Frontend",
@@ -134,7 +173,6 @@ export const SKILLS: SkillCategory[] = [
     {
         category: "AI & ML",
         skills: [
-            "Generative AI",
             "LangChain",
             "Langgraph",
             "promptEngineering",
@@ -163,25 +201,25 @@ export const SKILLS: SkillCategory[] = [
  */
 export const ACHIEVEMENTS: Achievement[] = [
     {
-        id: "buildathon",
-        title: "OpenAI Buildathon Finalist",
-        issuer: "OpenAI & NxtWave",
-        date: "2025",
-        description: "OpenAI Buildathon State Finalist",
-    },
-    {
-        id: "google-hackathon",
-        title: "Google Gen AI Hackathon",
+        id: "google-genai-exchange",
+        title: "Google GenAI Exchange Hackathon",
         issuer: "Google",
         date: "2025",
-        description: "Google Gen AI Hackathon SemiFinalist(National Level)",
+        description: "Participant, Google GenAI Exchange Hackathon",
     },
     {
-        id: "Newsletter",
-        title: "Author of AI With RSK",
-        issuer: "Linkedin",
+        id: "openai-buildathon",
+        title: "OpenAI Buildathon Runner-up",
+        issuer: "OpenAI & NxtWave",
         date: "2025",
-        description: "Author of AI With RSK Linkedin Newsletter(500+ followers)",
+        description: "Runner-up, OpenAI Buildathon",
+    },
+    {
+        id: "java-fullstack-cert",
+        title: "Java Full-Stack Certification",
+        issuer: "Wipro TalentNext",
+        date: "2025",
+        description: "Java Full-Stack Certification, Wipro TalentNext",
     },
 ];
 

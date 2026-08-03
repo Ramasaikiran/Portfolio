@@ -1,9 +1,22 @@
 "use client";
 
-import { useRef, useMemo } from "react";
+import { useRef, useEffect } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Float } from "@react-three/drei";
 import * as THREE from "three";
+
+// Generated once at module load (outside render, so it's not an impure
+// render call) rather than per-mount.
+function generateParticlePositions(): Float32Array {
+    const positions = new Float32Array(100 * 3);
+    for (let i = 0; i < 100; i++) {
+        positions[i * 3] = (Math.random() - 0.5) * 10;
+        positions[i * 3 + 1] = (Math.random() - 0.5) * 10;
+        positions[i * 3 + 2] = (Math.random() - 0.5) * 5;
+    }
+    return positions;
+}
+const PARTICLE_POSITIONS = generateParticlePositions();
 
 /**
  * Particle system with mouse interaction
@@ -11,27 +24,19 @@ import * as THREE from "three";
 function ParticleField() {
     const particlesRef = useRef<THREE.Points>(null);
     const mousePos = useRef({ x: 0, y: 0 });
-
-    // Generate particle positions
-    const particlePositions = useMemo(() => {
-        const positions = new Float32Array(100 * 3);
-        for (let i = 0; i < 100; i++) {
-            positions[i * 3] = (Math.random() - 0.5) * 10;
-            positions[i * 3 + 1] = (Math.random() - 0.5) * 10;
-            positions[i * 3 + 2] = (Math.random() - 0.5) * 5;
-        }
-        return positions;
-    }, []);
+    const particlePositions = PARTICLE_POSITIONS;
 
     // Mouse move handler
-    if (typeof window !== "undefined") {
-        window.addEventListener("mousemove", (e) => {
+    useEffect(() => {
+        const handleMouseMove = (e: MouseEvent) => {
             mousePos.current = {
                 x: (e.clientX / window.innerWidth) * 2 - 1,
                 y: -(e.clientY / window.innerHeight) * 2 + 1,
             };
-        });
-    }
+        };
+        window.addEventListener("mousemove", handleMouseMove);
+        return () => window.removeEventListener("mousemove", handleMouseMove);
+    }, []);
 
     // Animation loop
     useFrame(() => {

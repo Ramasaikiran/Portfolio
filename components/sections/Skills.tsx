@@ -18,10 +18,14 @@ const Icons = {
             <path d="M192.45 0C86.136 0 0 86.138 0 192.454C0 298.77 86.136 384.908 192.45 384.908C298.766 384.908 384.902 298.77 384.902 192.454C384.902 86.138 298.766 0 192.45 0ZM249.778 288.796C237.94 294.948 214.542 299.872 191.222 299.872C151.01 299.872 135.012 284.18 135.012 258.952C135.012 238.442 153.164 220.598 186.298 220.598C197.682 220.598 206.912 221.826 211.528 222.75V161.218C211.528 141.22 197.682 135.682 181.684 135.682C167.532 135.682 157.686 139.682 149.07 144.298L134.912 108.61C145.988 102.148 165.992 94.764 191.222 94.764C236.446 94.764 259.212 114.762 259.212 154.142V231.674C259.212 240.29 260.442 245.828 262.596 251.058V291.564C258.904 290.95 254.596 290.026 249.778 288.796ZM211.528 259.668V249.822C207.526 248.898 201.372 247.974 194.91 247.974C179.834 247.974 173.374 254.128 173.374 262.336C173.374 271.258 179.526 276.182 193.372 276.182C201.064 276.182 208.756 274.028 211.528 271.566V259.668Z" fill="#ff2400" />
         </svg>
     ),
-    Python: (
-        <svg viewBox="0 0 128 128" className="h-full w-full" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-            <path d="M63.02 9.006c-13.882.043-26.608 1.996-26.608 11.455v11.72h27.14v3.864H27.135c-11.238 0-20.916 7.64-20.916 20.354 0 13.792 7.749 22.868 20.916 22.868h4.63V73.33c0-7.854 6.843-14.7 14.697-14.7H86.27V42.74c0-11.238-9.874-20.732-21.72-20.732H63.02V9.006zm-7.642 6.757a3.951 3.951 0 0 1 3.953 3.952 3.951 3.951 0 0 1-3.953 3.952 3.951 3.951 0 0 1-3.953-3.952 3.951 3.951 0 0 1 3.953-3.952zm43.344 26.969c13.883-.043 26.609-1.996 26.609-11.455V19.557H98.191v-3.864h36.417c11.238 0 20.916-7.64 20.916-20.354 0-13.792-7.749-22.868-20.916-22.868h-4.63v5.939c0 7.854-6.843 14.7-14.697 14.7H75.922v15.892c0 11.238 9.874 20.732 21.72 20.732h1.528v13.007h-.45z" transform="matrix(1 0 0 -1 0 132)" fill="#3776AB" />
-            <path d="M63.02 9.006c-13.882.043-26.608 1.996-26.608 11.455v11.72h27.14v3.864H27.135c-11.238 0-20.916 7.64-20.916 20.354 0 13.792 7.749 22.868 20.916 22.868h4.63V73.33c0-7.854 6.843-14.7 14.697-14.7H86.27V42.74c0-11.238-9.874-20.732-21.72-20.732H63.02V9.006zm-7.642 6.757a3.951 3.951 0 0 1 3.953 3.952 3.951 3.951 0 0 1-3.953 3.952 3.951 3.951 0 0 1-3.953-3.952zm-12.87 96.696a3.951 3.951 0 0 1 3.953 3.952 3.951 3.951 0 0 1-3.953 3.952 3.951 3.951 0 0 1-3.953-3.952 3.951 3.951 0 0 1 3.953-3.952z" fill="#FFD43B" />
+    React: (
+        <svg viewBox="-11.5 -10.23174 23 20.46348" className="h-full w-full" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="0" cy="0" r="2.05" fill="#61dafb" />
+            <g stroke="#61dafb" strokeWidth="1" fill="none">
+                <ellipse rx="11" ry="4.2" />
+                <ellipse rx="11" ry="4.2" transform="rotate(60)" />
+                <ellipse rx="11" ry="4.2" transform="rotate(120)" />
+            </g>
         </svg>
     ),
     JavaScript: (
@@ -46,26 +50,15 @@ const Icons = {
             <path fill="#4296AD" d="M84.4 72c-13.5 0-25.5-5.3-25.5-12.8v16.1c0 7.5 12 13.8 25.5 13.8 13.5 0 25.5-6.3 25.5-13.8V59.2c0 7.5-12 12.8-25.5 12.8z" />
         </svg>
     ),
-    GenAI: (
-        <svg viewBox="0 0 24 24" className="h-full w-full" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" xmlns="http://www.w3.org/2000/svg">
-            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
-            <polyline points="7.5 4.21 12 6.81 16.5 4.21" />
-            <polyline points="7.5 19.79 7.5 14.6 3 12" />
-            <polyline points="21 12 16.5 14.6 16.5 19.79" />
-            <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
-            <line x1="12" y1="22.08" x2="12" y2="12" />
-        </svg>
-    )
 };
 
 
 const PROGRAMMING_SKILLS: Skill[] = [
     { name: "Java", icon: Icons.Java, color: "bg-red-50 text-red-700 border-red-200", description: "Core Language" },
-    { name: "Python", icon: Icons.Python, color: "bg-blue-50 text-blue-700 border-blue-200", description: "AI & Scripting" },
     { name: "JavaScript", icon: Icons.JavaScript, color: "bg-yellow-50 text-yellow-700 border-yellow-200", description: "Web Development" },
     { name: "TypeScript", icon: Icons.TypeScript, color: "bg-blue-50 text-blue-800 border-blue-300", description: "Type-Safe Web" },
+    { name: "React", icon: Icons.React, color: "bg-cyan-50 text-cyan-700 border-cyan-200", description: "Frontend Library" },
     { name: "SQL", icon: Icons.SQL, color: "bg-orange-50 text-orange-700 border-orange-200", description: "Database Management" },
-    { name: "Generative AI", icon: Icons.GenAI, color: "bg-purple-50 text-purple-700 border-purple-200", description: "LLMs & Diffusion" },
 ];
 
 export default function Skills() {

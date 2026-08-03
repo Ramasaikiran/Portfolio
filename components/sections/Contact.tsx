@@ -46,7 +46,7 @@ export default function Contact() {
                 setFormStatus("error");
                 setTimeout(() => setFormStatus("idle"), 5000);
             }
-        } catch (error) {
+        } catch {
             setFormStatus("error");
             setTimeout(() => setFormStatus("idle"), 5000);
         }
@@ -71,7 +71,7 @@ export default function Contact() {
                         variants={fadeInUp}
                         className="mb-4 text-center text-4xl font-bold text-gray-900 sm:text-5xl"
                     >
-                        Let's Connect
+                        Let&apos;s Connect
                     </motion.h2>
 
                     <div className="grid gap-8 lg:grid-cols-2">
@@ -129,7 +129,7 @@ export default function Contact() {
                                             className="flex items-center gap-2 rounded-lg bg-green-50 border border-green-200 p-4 text-green-700"
                                         >
                                             <CheckCircle size={20} />
-                                            <p>Message sent successfully! I'll get back to you soon.</p>
+                                            <p>Message sent successfully! I&apos;ll get back to you soon.</p>
                                         </motion.div>
                                     )}
 
