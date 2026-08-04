@@ -105,7 +105,6 @@ export const PROJECTS: Project[] = [
             "React",
             "JavaScript",
             "Node.js",
-            "Spring Boot",
             "PostgreSQL",
         ],
         github: "https://github.com/Ramasaikiran/NyayaAI",
