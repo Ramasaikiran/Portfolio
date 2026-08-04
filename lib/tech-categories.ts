@@ -29,6 +29,7 @@ const CATEGORY_MAP: Record<string, TechCategory> = {
     Supabase: "Database",
     MongoDB: "Database",
     MySQL: "Database",
+    PostgreSQL: "Database",
 
     // Core CS (algorithms, architecture, and other foundational concepts
     // that show up as part of a tech stack)

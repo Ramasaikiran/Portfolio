@@ -61,6 +61,7 @@ export const PROJECTS: Project[] = [
             "Built a scoring engine with customizable criteria that evaluates ideas across multiple dimensions. Integrated Claude API for AI-assisted feedback and structured the output to give clear, actionable validation results.",
         techStack: [
             "Python",
+            "JavaScript",
             "ClaudeAPI",
             "React",
             "SQL",
@@ -83,6 +84,7 @@ export const PROJECTS: Project[] = [
             "React",
             "TypeScript",
             "Supabase",
+            "PostgreSQL",
             "Tailwind",
         ],
         github: "https://github.com/Ramasaikiran/Safe-Her",
@@ -101,8 +103,10 @@ export const PROJECTS: Project[] = [
             "Built a role-based access control system for lawyers, users, and admins, with AI-assisted petition drafting and a lawyer KYC pipeline.",
         techStack: [
             "React",
+            "JavaScript",
             "Node.js",
             "Spring Boot",
+            "PostgreSQL",
         ],
         github: "https://github.com/Ramasaikiran/NyayaAI",
         liveUrl: "https://nyaya-ai-s38w-k87qjg2qd-kirans-projects-9ede22f9.vercel.app/",
