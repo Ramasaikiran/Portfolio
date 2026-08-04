@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useSyncExternalStore } from "react";
 import { createPortal } from "react-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { ExternalLink, Github, X } from "lucide-react";
@@ -8,20 +8,27 @@ import FloatingCard from "@/components/ui/FloatingCard";
 import Badge from "@/components/ui/Badge";
 import Button from "@/components/ui/Button";
 import { PROJECTS } from "@/lib/constants";
+import { groupTechStack } from "@/lib/tech-categories";
 import { Project } from "@/types";
 import { fadeInUp, staggerContainer } from "@/lib/animations";
 
+const emptySubscribe = () => () => {};
+
 export default function Projects() {
     const [selectedProject, setSelectedProject] = useState<Project | null>(null);
-    const [mounted, setMounted] = useState(false);
 
-    useEffect(() => {
-        setMounted(true);
-    }, []);
+    // Portals need a browser document to attach to; this is the React-
+    // recommended way to detect "we're on the client" without a
+    // setState-in-effect cascade.
+    const mounted = useSyncExternalStore(
+        emptySubscribe,
+        () => true,
+        () => false
+    );
 
     // Lock body scroll when modal is open (overflow:hidden alone isn't
     // reliable on mobile Chrome/Safari, which can still scroll the
-    // background via touch — pin body position instead)
+    // background via touch, so pin body position instead)
     useEffect(() => {
         const close = () => setSelectedProject(null);
         window.addEventListener("closeProjectModal", close);
@@ -151,9 +158,16 @@ export default function Projects() {
                                     {selectedProject.title}
                                 </h2>
 
-                                <div className="mb-6 flex flex-wrap gap-2">
-                                    {selectedProject.techStack.map((tech) => (
-                                        <Badge key={tech}>{tech}</Badge>
+                                <div className="mb-6 space-y-3">
+                                    {groupTechStack(selectedProject.techStack).map((group) => (
+                                        <div key={group.category} className="flex flex-wrap items-center gap-2">
+                                            <span className="text-xs font-semibold uppercase tracking-wide text-gray-400">
+                                                {group.category}
+                                            </span>
+                                            {group.items.map((tech) => (
+                                                <Badge key={tech}>{tech}</Badge>
+                                            ))}
+                                        </div>
                                     ))}
                                 </div>
 

@@ -35,7 +35,7 @@ export default function GlassNavbar() {
 
     const handleNavClick = (href: string) => {
         const id = href.substring(1);
-        // Close any open project modal first — it locks body scroll
+        // Close any open project modal first, since it locks body scroll
         // and sits above the navbar, which blocks section navigation.
         window.dispatchEvent(new Event("closeProjectModal"));
         setIsMobileMenuOpen(false);
