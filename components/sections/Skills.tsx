@@ -54,16 +54,72 @@ const Icons = {
             <path fill="#4296AD" d="M84.4 72c-13.5 0-25.5-5.3-25.5-12.8v16.1c0 7.5 12 13.8 25.5 13.8 13.5 0 25.5-6.3 25.5-13.8V59.2c0 7.5-12 12.8-25.5 12.8z" />
         </svg>
     ),
+    NodeJS: (
+        <svg viewBox="0 0 128 128" className="h-full w-full" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#339933" d="M64 4 L116 34 V94 L64 124 L12 94 V34 Z" />
+            <g fill="#ffffff">
+                <rect x="46" y="40" width="9" height="48" />
+                <rect x="73" y="40" width="9" height="48" />
+                <polygon points="46,40 55,40 82,88 73,88" />
+            </g>
+        </svg>
+    ),
+    SpringBoot: (
+        <svg viewBox="0 0 128 128" className="h-full w-full" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="64" cy="64" r="60" fill="#6DB33F" />
+            <path
+                fill="#ffffff"
+                d="M96 34c-14 18-40 12-56 26-10 9-12 22-8 30 1-4 4-9 9-12-3 6-4 14-1 20 8-18 24-22 38-30 12-7 20-18 18-34zM40 96c-2-6-2-13 1-19 3 8 10 13 18 15 12 3 24 0 32-8-8 14-24 20-38 18-5-1-10-3-13-6z"
+            />
+        </svg>
+    ),
 };
 
 
-const PROGRAMMING_SKILLS: Skill[] = [
-    { name: "Java", icon: Icons.Java, color: "bg-red-50 text-red-700 border-red-200", description: "Core Language" },
-    { name: "JavaScript", icon: Icons.JavaScript, color: "bg-yellow-50 text-yellow-700 border-yellow-200", description: "Web Development" },
-    { name: "TypeScript", icon: Icons.TypeScript, color: "bg-blue-50 text-blue-800 border-blue-300", description: "Type-Safe Web" },
-    { name: "React", icon: Icons.React, color: "bg-cyan-50 text-cyan-700 border-cyan-200", description: "Frontend Library" },
-    { name: "SQL", icon: Icons.SQL, color: "bg-orange-50 text-orange-700 border-orange-200", description: "Database Management" },
+type SkillGroup = {
+    category: string;
+    skills: Skill[];
+};
+
+type ConceptGroup = {
+    category: string;
+    concepts: string[];
+};
+
+const SKILL_GROUPS: SkillGroup[] = [
+    {
+        category: "Frontend",
+        skills: [
+            { name: "React", icon: Icons.React, color: "bg-cyan-50 text-cyan-700 border-cyan-200", description: "Frontend Library" },
+            { name: "TypeScript", icon: Icons.TypeScript, color: "bg-blue-50 text-blue-800 border-blue-300", description: "Type-Safe Web" },
+            { name: "JavaScript", icon: Icons.JavaScript, color: "bg-yellow-50 text-yellow-700 border-yellow-200", description: "Web Development" },
+        ],
+    },
+    {
+        category: "Programming Language",
+        skills: [
+            { name: "Java", icon: Icons.Java, color: "bg-red-50 text-red-700 border-red-200", description: "Core Language" },
+        ],
+    },
+    {
+        category: "Backend",
+        skills: [
+            { name: "Node.js", icon: Icons.NodeJS, color: "bg-green-50 text-green-700 border-green-200", description: "Runtime & APIs" },
+            { name: "Spring Boot", icon: Icons.SpringBoot, color: "bg-green-50 text-green-700 border-green-200", description: "Java Backend Framework" },
+        ],
+    },
+    {
+        category: "Database",
+        skills: [
+            { name: "SQL", icon: Icons.SQL, color: "bg-orange-50 text-orange-700 border-orange-200", description: "Database Management" },
+        ],
+    },
 ];
+
+const CORE_CS_GROUP: ConceptGroup = {
+    category: "Core CS Concepts",
+    concepts: ["Data Structures and Algorithms", "Object Oriented Programming", "System Design"],
+};
 
 export default function Skills() {
     return (
@@ -82,20 +138,52 @@ export default function Skills() {
                         Technical Skills
                     </motion.h2>
 
-                    <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                        {PROGRAMMING_SKILLS.map((skill) => (
-                            <motion.div key={skill.name} variants={fadeInUp}>
-                                <FloatingCard enableHover={true} className={`h-full border ${skill.color} bg-opacity-40 backdrop-blur-sm`}>
-                                    <div className="flex flex-col items-center text-center">
-                                        <div className="mb-4 flex h-16 w-16 items-center justify-center p-2">
-                                            {skill.icon}
-                                        </div>
-                                        <h3 className="mb-2 text-xl font-bold text-gray-900">{skill.name}</h3>
-                                        <p className="text-sm text-gray-600">{skill.description}</p>
-                                    </div>
-                                </FloatingCard>
-                            </motion.div>
+                    <div className="space-y-12">
+                        {SKILL_GROUPS.map((group) => (
+                            <div key={group.category}>
+                                <motion.h3
+                                    variants={fadeInUp}
+                                    className="mb-6 text-xl font-semibold text-purple-600"
+                                >
+                                    {group.category}
+                                </motion.h3>
+                                <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                                    {group.skills.map((skill) => (
+                                        <motion.div key={skill.name} variants={fadeInUp}>
+                                            <FloatingCard enableHover={true} className={`h-full border ${skill.color} bg-opacity-40 backdrop-blur-sm`}>
+                                                <div className="flex flex-col items-center text-center">
+                                                    <div className="mb-4 flex h-16 w-16 items-center justify-center p-2">
+                                                        {skill.icon}
+                                                    </div>
+                                                    <h4 className="mb-2 text-xl font-bold text-gray-900">{skill.name}</h4>
+                                                    <p className="text-sm text-gray-600">{skill.description}</p>
+                                                </div>
+                                            </FloatingCard>
+                                        </motion.div>
+                                    ))}
+                                </div>
+                            </div>
                         ))}
+
+                        {/* Core CS Concepts — no brand logos, shown as tags */}
+                        <div>
+                            <motion.h3
+                                variants={fadeInUp}
+                                className="mb-6 text-xl font-semibold text-purple-600"
+                            >
+                                {CORE_CS_GROUP.category}
+                            </motion.h3>
+                            <motion.div variants={fadeInUp} className="flex flex-wrap gap-3">
+                                {CORE_CS_GROUP.concepts.map((concept) => (
+                                    <span
+                                        key={concept}
+                                        className="rounded-full border border-purple-200 bg-purple-50 px-5 py-2.5 text-sm font-medium text-purple-700"
+                                    >
+                                        {concept}
+                                    </span>
+                                ))}
+                            </motion.div>
+                        </div>
                     </div>
                 </motion.div>
             </div>

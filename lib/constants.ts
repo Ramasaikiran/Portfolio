@@ -118,37 +118,26 @@ export const PROJECTS: Project[] = [
 export const SKILLS: SkillCategory[] = [
     {
         category: "Frontend",
-        skills: ["HTML", "CSS", "JavaScript", "TypeScript", "React"],
+        skills: ["React", "TypeScript", "JavaScript"],
+    },
+    {
+        category: "Programming Language",
+        skills: ["Java"],
     },
     {
         category: "Backend",
-        skills: ["Java", "Node.js", "Spring Boot", "REST APIs"],
+        skills: ["Node.js", "Spring Boot"],
     },
     {
-        category: "Databases",
-        skills: ["SQL", "Supabase"],
+        category: "Database",
+        skills: ["SQL"],
     },
     {
         category: "Core CS Concepts",
         skills: [
-            "Data Structures & Algorithms",
-            "Object-Oriented Programming",
-            "Operating Systems",
-            "Computer Networks",
+            "Data Structures and Algorithms",
+            "Object Oriented Programming",
             "System Design",
-            "Microservices Architecture",
-        ],
-    },
-    {
-        category: "Developer Tools",
-        skills: ["Git", "GitHub", "Vercel"],
-    },
-    {
-        category: "AI & ML",
-        skills: [
-            "LangChain",
-            "Langgraph",
-            "promptEngineering",
         ],
     },
 ];
